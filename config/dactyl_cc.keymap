@@ -165,7 +165,7 @@
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &none
 &none         &out OUT_USB  &out OUT_BLE  &none         &sys_reset    &none         &none         &sys_reset    &none         &none         &none         &none
 &none         &tog KMAC     &tog KSH      &none         &none         &to KGAM      &none         &none         &none         &none         &none         &none
-&none         &none         &nont         &none         &none         &none         &bootloader   &bootloader   &none         &none         &none         &none
+&none         &none         &none         &none         &none         &none         &bootloader   &bootloader   &none         &none         &none         &none
               &none         &none         &none         &none                                     &none         &none         &none         &none
                                                         &none         &none         &none         &none
                                                                       &none         &none
