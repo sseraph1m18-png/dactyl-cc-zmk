@@ -4,12 +4,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define KDEF         0 // Default layer
-#define KMAC         1 // Mac overlay
-#define KSH          2 // Single Hand layer
-#define KSHM         3 // Single Hand Mirror layer
-#define KLOW         4 // Lower layer
-#define KGAM         5 // Gaming overlay
-#define KSET         6 // Settings layer
+#define KSH          1 // Single Hand layer
+#define KSHM         2 // Single Hand Mirror layer
+#define KLOW         3 // Lower layer
+#define KGAM         4 // Gaming overlay
+#define KSET         5 // Settings layer
 
 // Modifiers
 #define HYPER(key)   LS(LC(LA(LG(key)))) // LSHFT+LCTRL+LALT+LGUI
@@ -85,21 +84,7 @@
               &kp GRAVE     &kp NUBS      &kp LEFT      &kp RIGHT                                 &kp UP        &kp DOWN      &kp LBKT      &kp RBKT
                                                         &kp LCTRL     &kp LALT      &kp RGUI      &kp RCTRL 
                                                                       &kp F2        &lt KSET ESC
-                                          &kp BSPC      &kp DEL       &kp F5        &kp END       &kp ENTER       &kp SPACE
-                     >;
-              };
-
-              mac_layer {
-                     display-name = "Mac";
-                     bindings = <
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans                                    &trans        &trans        &trans        &trans
-                                                        &trans        &trans        &trans        &trans
-                                                                      &trans        &trans
-                                          &kp LGUI      &kp LALT      &kp LCTRL     &trans        &trans        &trans
+                                          &kp BSPC      &kp DEL       &lt KLOW F5   &kp END       &kp ENTER       &kp SPACE
                      >;
               };
 
@@ -148,11 +133,11 @@
               game_layer {
                      display-name = "Gaming";
                      bindings = <
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11
+&kp ESC       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &trans        &trans        &trans        &trans        &trans        &trans
 &kp TAB       &kp T         &kp Q         &kp W         &kp E         &kp R         &trans        &trans        &trans        &trans        &trans        &trans
-&kp G         &kp LSHFT     &kp A         &kp S         &kp D         &kp F         &trans        &trans        &trans        &trans        &trans        &trans
-&kp M         &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &kp COMMA     &kp DOT       &trans        &trans                                    &trans        &trans        &trans        &trans
+&kp CAPS      &kp G         &kp A         &kp S         &kp D         &kp F         &trans        &trans        &trans        &trans        &trans        &trans
+&kp LSHFT     &kp B         &kp Z         &kp X         &kp C         &kp V         &trans        &trans        &trans        &trans        &trans        &trans
+              &kp GRAVE     &kp NUBS      &kp LEFT      &kp RIGHT                                 &trans        &trans        &trans        &trans
                                                         &kp I         &kp M         &trans        &trans
                                                                       &kp ENTER     &trans
                                           &kp SP        &kp LCTRL     &kp LALT      &trans        &trans        &trans
@@ -164,7 +149,7 @@
                      bindings = <
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &tog KGAM
 &none         &out OUT_USB  &out OUT_BLE  &none         &sys_reset    &none         &none         &sys_reset    &none         &none         &none         &none
-&none         &tog KMAC     &tog KSH      &none         &none         &to KGAM      &none         &none         &none         &none         &none         &none
+&none         &none         &tog KSH      &none         &none         &to KGAM      &none         &none         &none         &none         &none         &none
 &none         &none         &none         &none         &none         &none         &bootloader   &bootloader   &none         &none         &none         &none
               &none         &none         &none         &none                                     &none         &none         &none         &none
                                                         &none         &none         &none         &none
