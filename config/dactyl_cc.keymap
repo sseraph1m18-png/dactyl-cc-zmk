@@ -37,8 +37,11 @@
                      #binding-cells = <0>;
                      bindings = <&kp BACKSPACE>, <&kp DELETE>;
                      mods = <(MOD_LSFT|MOD_RSFT)>;
-              };
-       };
+              };              
+              studio_unlock: studio_unlock {
+                     compatible = "zmk,behavior-studio-unlock";
+                     #binding-cells = <0>;
+              };       };
 
        macros {
               /**
@@ -149,7 +152,7 @@
                      bindings = <
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &tog KGAM
 &none         &out OUT_USB  &out OUT_BLE  &none         &sys_reset    &none         &none         &sys_reset    &none         &none         &none         &none
-&none         &none         &tog KSH      &none         &none         &to KGAM      &none         &none         &none         &none         &none         &none
+&none         &studio_unlock &tog KSH     &none         &none         &to KGAM      &none         &none         &none         &none         &none         &none
 &none         &none         &none         &none         &none         &none         &bootloader   &bootloader   &none         &none         &none         &none
               &none         &none         &none         &none                                     &none         &none         &none         &none
                                                         &none         &none         &none         &none
